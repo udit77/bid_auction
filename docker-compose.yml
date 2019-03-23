@@ -1,0 +1,11 @@
+version: '2'
+services:
+  gg-app-run:
+    container_name: gg-app-run
+    build: .
+    command: go run app.go
+    volumes:
+      - .:/go/src/github.com/bid_auction
+    working_dir: /go/src/github.com/bid_auction
+    ports:
+      - "9001:9000"
